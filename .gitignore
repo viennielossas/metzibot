@@ -1,0 +1,3 @@
+# Ignorar carpetas y archivos grandes/secretos
+node_modules/
+.env

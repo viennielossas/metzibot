@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategia SEO | METZI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* NEBULOSA VERDE PARA SEO (ÉXITO/CRECIMIENTO) */
+        .orb-3 {
+            width: 700px; height: 700px;
+            background: rgba(16, 185, 129, 0.15); /* Verde esmeralda */
+            top: 15%; right: -10%;
+            filter: blur(180px);
+            opacity: 0.5;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .page-header { padding-top: 100px; padding-bottom: 30px; text-align: center; }
+
+        .seo-main-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .seo-main-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, transparent, #10b981, transparent);
+        }
+
+        .step-tag {
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-item h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-sec);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .cta-seo {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 16px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s;
+            font-family: 'Inter', sans-serif;
+            margin-top: 50px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-seo:hover {
+            background: #10b981;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .status-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            padding: 15px 25px;
+            border-radius: 16px;
+            margin-top: 40px;
+            width: fit-content;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .features-grid { grid-template-columns: 1fr; gap: 25px; }
+            .seo-main-card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-light">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo">METZI<span>.</span></a>
+        <div class="menu">
+            <a href="index.html#servicios" class="nav-btn" style="background: transparent; border: 1px solid var(--border);">Volver</a>
+        </div>
+    </nav>
+
+    <section class="container page-header">
+        <span class="section-title">Posicionamiento Web</span>
+        <h1 style="font-size: 3.5rem; margin-bottom: 15px; letter-spacing: -2px;">Domina los Buscadores</h1>
+        <p style="color: var(--text-sec); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+            No construimos webs invisibles. Optimizamos cada pixel para que Google trabaje a tu favor y atraigas tráfico calificado.
+        </p>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <div class="seo-main-card">
+            <span class="step-tag">Estrategia SEO</span>
+            <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 20px;">Visibilidad de Alto Rendimiento</h2>
+            <p style="color: var(--text-sec); font-size: 1.1rem; max-width: 750px;">
+                Estar en la segunda página de Google es lo mismo que no existir. Nuestro servicio de SEO técnico y de contenido asegura que tu negocio sea la primera opción para tus clientes.
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4><span style="color:#10b981;">01.</span> SEO On-Page</h4>
+                    <p>Optimizamos etiquetas, títulos y descripciones para que los motores de búsqueda entiendan exactamente qué ofreces.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#10b981;">02.</span> WPO (Velocidad)</h4>
+                    <p>Mejoramos el tiempo de carga al máximo. Una web rápida es una web que Google ama y posiciona arriba.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#10b981;">03.</span> Keyword Research</h4>
+                    <p>Analizamos qué buscan tus clientes potenciales y atacamos esas palabras clave para atraer tráfico que realmente compre.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#10b981;">04.</span> Indexación Técnica</h4>
+                    <p>Configuramos Sitemaps y archivos Robots para que Google rastree tu sitio de forma eficiente y sin errores.</p>
+                </div>
+            </div>
+
+            <div class="status-badge">
+                <div style="width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
+                Resultados medibles con Google Analytics
+            </div>
+
+            <a href="contact.html" class="cta-seo">Optimizar mi Posicionamiento</a>
+        </div>
+    </section>
+
+<footer class="container reveal">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">METZI<span>.</span></a>
+            <p style="color: var(--text-sec); font-size: 0.9rem; line-height: 1.6;">
+                Diseño y desarrollo de alta gama para marcas que buscan destacar en la era digital.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul class="footer-links">
+                <li><a href="webs.html">Sitios Web & Landings</a></li>
+                <li><a href="ui.html">Rediseño UI/UX</a></li>
+                <li><a href="seo.html">Posicionamiento SEO</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Mapa del Sitio</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#perfil">Sobre Nosotros</a></li>
+                <li><a href="index.html#proyectos">Portafolio</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contáctenos</h4>
+            <ul class="footer-links">
+                <li><a href="contact.html" style="color: var(--accent); font-weight: 600;">Formulario de Contacto →</a></li>
+            </ul>            
+            <p style="color: var(--text-sec); margin-bottom: 10px; font-size: 0.9rem;">📧 metzisoluciones@gmail.com</p>
+        
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; color: #444; font-size: 0.8rem;">METZI STUDIO © 2025</p>
+</footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

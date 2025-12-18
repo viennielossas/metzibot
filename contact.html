@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | METZI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Esto obliga al navegador a usar la fuente correcta sí o sí */
+        button, input, textarea, .submit-btn {
+            font-family: 'Inter', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-light">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo">METZI<span>.</span></a>
+        <div class="menu">
+            <a href="index.html" class="nav-btn" style="background: transparent; border: 1px solid var(--border);">Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <section class="container" style="padding-top: 100px;">
+        
+        <div class="hero" style="min-height: auto; margin-bottom: 40px; padding: 0;">
+            <span class="section-title">Contacto</span>
+            <h1 style="font-size: 5rem; margin-bottom: 10px;">Inicia tu Proyecto</h1>
+            <p>Cuéntame tu idea y analicemos cómo llevarla a cabo.</p>
+        </div>
+
+        <div class="glass-card contact-wrapper">
+            <form action="#" method="POST" class="form-grid">
+                
+                <div class="input-group full-width">
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ej: Juan Pérez" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Teléfono</label>
+                    <input type="tel" placeholder="+54 9 11..." required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="hola@empresa.com" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Empresa / Rubro</label>
+                    <input type="text" placeholder="Nombre de tu negocio (Opcional)">
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Detalles del Proyecto</label>
+                    <textarea placeholder="Cuéntame sobre tus objetivos, dudas o requerimientos..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
+
+            </form>
+        </div>
+    </section>
+
+<footer class="container reveal">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">METZI<span>.</span></a>
+            <p style="color: var(--text-sec); font-size: 0.9rem; line-height: 1.6;">
+                Diseño y desarrollo de alta gama para marcas que buscan destacar en la era digital.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul class="footer-links">
+                <li><a href="webs.html">Sitios Web & Landings</a></li>
+                <li><a href="ui.html">Rediseño UI/UX</a></li>
+                <li><a href="seo.html">Posicionamiento SEO</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Mapa del Sitio</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#perfil">Sobre Nosotros</a></li>
+                <li><a href="index.html#proyectos">Portafolio</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contáctenos</h4>
+            <ul class="footer-links">
+                <li><a href="contact.html" style="color: var(--accent); font-weight: 600;">Formulario de Contacto →</a></li>
+            </ul>            
+            <p style="color: var(--text-sec); margin-bottom: 10px; font-size: 0.9rem;">📧 metzisoluciones@gmail.com</p>
+        
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; color: #444; font-size: 0.8rem;">METZI STUDIO © 2025</p>
+</footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

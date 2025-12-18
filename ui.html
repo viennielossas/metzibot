@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño UI/UX | METZI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* NEBULOSA ROSA PARA UI */
+        .orb-3 {
+            width: 700px; height: 700px;
+            background: rgba(236, 72, 153, 0.15); 
+            top: 15%; right: -10%;
+            filter: blur(180px);
+            opacity: 0.5;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .page-header { padding-top: 100px; padding-bottom: 30px; text-align: center; }
+
+        /* BLOQUE ÚNICO GRANDE */
+        .ui-main-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ui-main-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 4px;
+            background: linear-gradient(90deg, transparent, #ec4899, transparent);
+        }
+
+        .step-tag {
+            background: rgba(236, 72, 153, 0.1);
+            color: #ec4899;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        /* GRILLA INTERNA DE CARACTERÍSTICAS */
+        .features-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-item h4 {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-item p {
+            color: var(--text-sec);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .figma-badge {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            padding: 12px 24px;
+            border-radius: 16px;
+            margin-top: 40px;
+            width: fit-content;
+        }
+
+        .cta-full {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 16px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s;
+            font-family: 'Inter', sans-serif;
+            margin-top: 50px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-full:hover {
+            background: #ec4899;
+            color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .features-container { grid-template-columns: 1fr; gap: 25px; }
+            .ui-main-card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-light">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <nav>
+        <a href="index.html" class="logo">METZI<span>.</span></a>
+        <div class="menu">
+            <a href="index.html#servicios" class="nav-btn" style="background: transparent; border: 1px solid var(--border);">Volver</a>
+        </div>
+    </nav>
+
+    <section class="container page-header">
+        <span class="section-title">Nuestra Metodología</span>
+        <h1 style="font-size: 3.5rem; margin-bottom: 15px; letter-spacing: -2px;">Diseño de Interfaz & UX</h1>
+        <p style="color: var(--text-sec); max-width: 600px; margin: 0 auto; font-size: 1.1rem;">
+            Fusionamos estética y funcionalidad para crear productos digitales que no solo se ven bien, sino que funcionan perfectamente.
+        </p>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <div class="ui-main-card">
+            <span class="step-tag">Estrategia Visual</span>
+            <h2 style="font-size: 2.5rem; color: #fff; margin-bottom: 20px;">Experiencias que Convierten</h2>
+            <p style="color: var(--text-sec); font-size: 1.1rem; max-width: 750px;">
+                Nuestro enfoque en UI/UX se centra en eliminar la fricción entre el usuario y tu producto. Estudiamos el comportamiento del cliente para diseñar interfaces intuitivas que refuercen la confianza en tu marca.
+            </p>
+
+            <div class="features-container">
+                <div class="feature-item">
+                    <h4><span style="color:#ec4899;">01.</span> Wireframing</h4>
+                    <p>Diseñamos la arquitectura de información antes de la estética, asegurando que el flujo de navegación sea lógico y eficiente.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#ec4899;">02.</span> Identidad Visual</h4>
+                    <p>Creamos sistemas de diseño coherentes con paletas de colores y tipografías que transmiten profesionalismo y modernidad.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#ec4899;">03.</span> Prototipado</h4>
+                    <p>Entregamos diseños interactivos navegables para validar cada sección antes de pasar a la etapa de programación.</p>
+                </div>
+                <div class="feature-item">
+                    <h4><span style="color:#ec4899;">04.</span> Optimización</h4>
+                    <p>Refinamos cada elemento visual (botones, formularios, menús) para maximizar la tasa de conversión de tu sitio.</p>
+                </div>
+            </div>
+
+            <div class="figma-badge">
+                <svg width="24" height="24" viewBox="0 0 38 57" fill="none"><path d="M19 28.5C19 25.8478 20.0536 23.3043 21.9289 21.4289C23.8043 19.5536 26.3478 18.5 29 18.5C31.6522 18.5 34.1957 19.5536 36.0711 21.4289C37.9464 23.3043 39 25.8478 39 28.5C39 31.1522 37.9464 33.6957 36.0711 35.5711C34.1957 37.4464 31.6522 38.5 29 38.5C26.3478 38.5 23.8043 37.4464 21.9289 35.5711C20.0536 33.6957 19 31.1522 19 28.5Z" fill="#1ABCFE"/><path d="M0 47.5C0 44.8478 1.05357 42.3043 2.92893 40.4289C4.8043 38.5536 7.34784 37.5 10 37.5C12.6522 37.5 15.1957 38.5536 17.0711 40.4289C18.9464 42.3043 20 44.8478 20 47.5C20 50.1522 18.9464 52.6957 17.0711 54.5711C15.1957 56.4464 12.6522 57.5 10 57.5C7.34784 57.5 4.8043 56.4464 2.92893 54.5711C1.05357 52.6957 0 50.1522 0 47.5V47.5Z" fill="#0ACF83"/><path d="M0 28.5C0 25.8478 1.05357 23.3043 2.92893 21.4289C4.8043 19.5536 7.34784 18.5 10 18.5H20V38.5H10C7.34784 38.5 4.8043 37.4464 2.92893 35.5711C1.05357 33.6957 0 31.1522 0 28.5V28.5Z" fill="#A259FF"/><path d="M0 9.5C0 6.84784 1.05357 4.3043 2.92893 2.42893C4.8043 0.55357 7.34784 0 10 0H20V19H10C7.34784 19 4.8043 17.9464 2.92893 16.0711C1.05357 14.1957 0 11.6522 0 9.5V9.5Z" fill="#F24E1E"/><path d="M20 0H30C32.6522 0 35.1957 1.05357 37.0711 2.92893C38.9464 4.8043 40 7.34784 40 9.5C40 11.6522 38.9464 14.1957 37.0711 16.0711C35.1957 17.9464 32.6522 19 30 19H20V0Z" fill="#FF7262"/></svg>
+                <span style="color: #fff; font-weight: 600; font-size: 0.95rem;">Flujo de trabajo estandarizado en Figma</span>
+            </div>
+
+            <a href="contact.html" class="cta-full">Solicitar Cotización de Diseño</a>
+        </div>
+    </section>
+
+<footer class="container reveal">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">METZI<span>.</span></a>
+            <p style="color: var(--text-sec); font-size: 0.9rem; line-height: 1.6;">
+                Diseño y desarrollo de alta gama para marcas que buscan destacar en la era digital.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul class="footer-links">
+                <li><a href="webs.html">Sitios Web & Landings</a></li>
+                <li><a href="ui.html">Rediseño UI/UX</a></li>
+                <li><a href="seo.html">Posicionamiento SEO</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Mapa del Sitio</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#perfil">Sobre Nosotros</a></li>
+                <li><a href="index.html#proyectos">Portafolio</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contáctenos</h4>
+            <ul class="footer-links">
+                <li><a href="contact.html" style="color: var(--accent); font-weight: 600;">Formulario de Contacto →</a></li>
+            </ul>            
+            <p style="color: var(--text-sec); margin-bottom: 10px; font-size: 0.9rem;">📧 metzisoluciones@gmail.com</p>
+        
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; color: #444; font-size: 0.8rem;">METZI STUDIO © 2025</p>
+</footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

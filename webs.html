@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo Web | METZI</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* --- ESTILOS ESPECÍFICOS PARA ESTA PÁGINA --- */
+
+        /* REEMPLAZA SOLO ESTE BLOQUE EN WEBS.HTML */
+.orb-3 {
+    width: 600px;
+    height: 600px;
+    /* Usamos un azul más profundo y con mucha menos fuerza */
+    background: rgba(8, 145, 178, 0.3); 
+    
+    top: 10%;
+    right: -20%;
+    
+    /* Aumentamos el blur de 140px a 200px para que sea una "neblina" y no una mancha */
+    filter: blur(140px); 
+    
+    opacity: 1; /* Bajamos la opacidad general */
+    pointer-events: none;
+    z-index: -1;
+}
+
+        .page-header { padding-top: 100px; padding-bottom: 40px; text-align: center; }
+
+        .options-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: stretch;
+        }
+
+        .option-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .option-card:hover { border-color: rgba(255,255,255,0.3); transform: translateY(-5px); }
+
+        .option-title {
+            font-size: 1.5rem; color: #fff; margin-bottom: 15px; border-bottom: 1px solid var(--border); padding-bottom: 15px;
+        }
+
+        .tech-list { list-style: none; margin-bottom: 25px; }
+        .tech-list li { margin-bottom: 12px; color: var(--text-sec); font-size: 0.95rem; display: flex; gap: 10px; }
+        .tech-list strong { color: #fff; }
+
+        /* CAJAS DESTACADAS */
+        .highlight-box {
+            border-radius: 12px; padding: 20px; margin-top: 20px; margin-bottom: 20px;
+        }
+        
+        /* Estilo VIOLETA (Izquierda) */
+        .box-code {
+            background: rgba(139, 92, 246, 0.1); border: 1px solid var(--accent);
+        }
+        .title-code { color: var(--accent); }
+
+        /* Estilo AZUL (Derecha - WordPress) */
+        .box-wp {
+            background: rgba(56, 189, 248, 0.1); border: 1px solid #38bdf8;
+        }
+        .title-wp { color: #38bdf8; }
+
+        .box-title {
+            font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 5px; display: flex; align-items: center; gap: 8px;
+        }
+
+        .cta-btn {
+            display: block; width: 100%; text-align: center; background: #fff; color: #000; padding: 15px; border-radius: 10px; font-weight: 700; text-decoration: none; transition: 0.3s; margin-top: auto; font-family: 'Inter', sans-serif; letter-spacing: 0.5px;
+        }
+        .cta-btn:hover { background: var(--accent); color: #fff; transform: translateY(-2px); }
+
+        @media (max-width: 768px) { .options-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div class="ambient-light">
+        <div class="orb orb-1"></div> <div class="orb orb-2"></div> <div class="orb orb-3"></div> </div>
+
+    <nav>
+        <a href="index.html" class="logo">METZI<span>.</span></a>
+        <div class="menu">
+            <a href="index.html#servicios" class="nav-btn" style="background: transparent; border: 1px solid var(--border);">Volver al Inicio</a>
+        </div>
+    </nav>
+
+    <section class="container page-header">
+        <span class="section-title">Nuestros Métodos</span>
+        <h1 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 15px;">Desarrollo Web Profesional</h1>
+        <p style="color: var(--text-sec); max-width: 600px; margin: 0 auto;">
+            Elige la tecnología que mejor se adapte a tu negocio. Calidad garantizada en ambas opciones.
+        </p>
+    </section>
+
+    <section class="container" style="padding-top: 0;">
+        <div class="options-grid">
+
+            <div class="option-card">
+                <div>
+                    <h2 class="option-title">⚡ Desarrollo a Medida</h2>
+                    <p style="color: var(--text-sec); margin-bottom: 20px; font-size: 0.95rem;">
+                        Máxima velocidad y personalización. Escribimos el código manualmente para un resultado único.
+                    </p>
+
+                    <ul class="tech-list">
+                        <li><span>🔹</span> <div><strong>HTML5 Semántico:</strong> Estructura perfecta para Google.</div></li>
+                        <li><span>🔹</span> <div><strong>CSS3 + JS:</strong> Animaciones fluidas y efectos Glass.</div></li>
+                        <li><span>🔹</span> <div><strong>Seguridad Total:</strong> Imposible de hackear fácilmente.</div></li>
+                    </ul>
+
+                    <div class="highlight-box box-code">
+                        <div class="box-title title-code">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17,1H7A2,2 0 0,0 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3A2,2 0 0,0 17,1M17,19H7V5H17V19M16,13H8V15H16V13Z" /></svg>
+                            100% RESPONSIVE DESIGN
+                        </div>
+                        <p style="font-size: 0.85rem; color: #fff;">
+                            Tu web se adaptará líquidamente a celulares, tablets y monitores 4K. Garantizamos que se vea perfecta en todos lados.
+                        </p>
+                    </div>
+                </div>
+                <a href="contact.html" class="cta-btn">Cotizar Web a Medida</a>
+            </div>
+
+            <div class="option-card">
+                <div>
+                    <h2 class="option-title" style="border-bottom-color: rgba(56, 189, 248, 0.3);">📝 Autoadministrables</h2>
+                    <p style="color: var(--text-sec); margin-bottom: 20px; font-size: 0.95rem;">
+                        Independencia total. Te entregamos un sistema llave en mano (WordPress) para que tú tengas el control.
+                    </p>
+
+                    <ul class="tech-list">
+                        <li><span style="color: #38bdf8;">✅</span> <div><strong>Panel de Control:</strong> Edita textos y fotos fácilmente.</div></li>
+                        <li><span style="color: #38bdf8;">✅</span> <div><strong>Blog Integrado:</strong> Sube noticias sin pagar extra.</div></li>
+                        <li><span style="color: #38bdf8;">✅</span> <div><strong>Plugins:</strong> Añade funciones (WhatsApp, Mapas) rápido.</div></li>
+                    </ul>
+
+                    <div class="highlight-box box-wp">
+                        <div class="box-title title-wp">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 12,4M12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6M12,8A4,4 0 0,0 8,12A4,4 0 0,0 12,16A4,4 0 0,0 16,12A4,4 0 0,0 12,8Z" /></svg>
+                            CAPACITACIÓN INCLUIDA
+                        </div>
+                        <p style="font-size: 0.85rem; color: #fff;">
+                            No necesitas saber programar. Te enseñamos en una clase privada a gestionar tu web para que no dependas de nadie.
+                        </p>
+                    </div>
+                </div>
+                <a href="contact.html" class="cta-btn">Cotizar Web WordPress</a>
+            </div>
+
+        </div>
+    </section>
+
+<footer class="container reveal">
+    <div class="footer-grid">
+        <div class="footer-col">
+            <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-block;">METZI<span>.</span></a>
+            <p style="color: var(--text-sec); font-size: 0.9rem; line-height: 1.6;">
+                Diseño y desarrollo de alta gama para marcas que buscan destacar en la era digital.
+            </p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Servicios</h4>
+            <ul class="footer-links">
+                <li><a href="webs.html">Sitios Web & Landings</a></li>
+                <li><a href="ui.html">Rediseño UI/UX</a></li>
+                <li><a href="seo.html">Posicionamiento SEO</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Mapa del Sitio</h4>
+            <ul class="footer-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#perfil">Sobre Nosotros</a></li>
+                <li><a href="index.html#proyectos">Portafolio</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contáctenos</h4>
+            <ul class="footer-links">
+                <li><a href="contact.html" style="color: var(--accent); font-weight: 600;">Formulario de Contacto →</a></li>
+            </ul>            
+            <p style="color: var(--text-sec); margin-bottom: 10px; font-size: 0.9rem;">📧 metzisoluciones@gmail.com</p>
+        
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 50px; color: #444; font-size: 0.8rem;">METZI STUDIO © 2025</p>
+</footer>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
